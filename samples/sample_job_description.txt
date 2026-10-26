@@ -1,0 +1,32 @@
+Senior Data Analyst — Northwind Logistics (Leeds, hybrid)
+
+About the role
+Northwind Logistics is looking for a Senior Data Analyst to join our young, energetic Insights team.
+You will own reporting for our UK warehouse network, build dashboards used by operations leaders,
+and run analyses that shape how we plan capacity and staffing.
+
+What you'll do
+- Build and maintain Power BI dashboards for warehouse and transport KPIs
+- Write complex SQL against our Snowflake data warehouse
+- Partner with operations managers to define metrics and present findings to senior leadership
+- Design and evaluate A/B tests on picking and routing processes
+- Mentor two junior analysts
+
+Requirements
+- At least 5 years' experience in a data analyst or BI role
+- Advanced SQL is essential
+- Experience with Power BI or Tableau
+- Degree in a quantitative subject (Maths, Statistics, Economics, Computer Science or similar)
+- Native English speaker
+- Must have the right to work in the UK
+
+Nice to have
+- Python (pandas) for analysis and automation
+- Experience in logistics, supply chain or e-commerce
+- Knowledge of statistics and experiment design
+- Snowflake or dbt experience
+
+Other
+- Hybrid: 2 days per week in our Leeds office
+- Occasional travel to warehouse sites across the UK
+- Willing to work occasional weekends during peak season

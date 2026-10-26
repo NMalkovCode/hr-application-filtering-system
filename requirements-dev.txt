@@ -1,0 +1,6 @@
+-r requirements.txt
+pytest>=8.0
+pytest-qt>=4.4
+fpdf2>=2.7
+pyinstaller>=6.10
+pywin32>=306; sys_platform == "win32"   # optional: page-count checks via Microsoft Word
