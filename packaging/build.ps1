@@ -28,3 +28,16 @@ else { Copy-Item "docs\HR_User_Guide.docx" "dist\" -Force }
 
 $size = (Get-Item "dist\HRScreening.exe").Length / 1MB
 Write-Host ("Built dist\HRScreening.exe ({0:N0} MB)" -f $size)
+
+# Installer (optional): needs Inno Setup 6 - https://jrsoftware.org/isinfo.php
+$iscc = @("${env:ProgramFiles(x86)}\Inno Setup 6\ISCC.exe", "$env:ProgramFiles\Inno Setup 6\ISCC.exe",
+          "$env:LOCALAPPDATA\Programs\Inno Setup 6\ISCC.exe") | Where-Object { Test-Path $_ } | Select-Object -First 1
+if ($iscc) {
+    $version = (& $python -c "import hr_screening; print(hr_screening.__version__)").Trim()
+    Write-Host "Building the installer (version $version)..."
+    & $iscc /Q "/DAppVersion=$version" packaging\installer.iss
+    if ($LASTEXITCODE -ne 0) { throw "Installer build failed." }
+    Write-Host "Built dist\HRScreening-Setup-$version.exe"
+} else {
+    Write-Host "Inno Setup 6 not found - skipping the installer (the exe above works without one)."
+}
